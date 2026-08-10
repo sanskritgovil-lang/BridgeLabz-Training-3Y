@@ -1,0 +1,77 @@
+Web Development Fundamentals Assignment Solutions
+Question 1: Explain the difference between frontend, backend, and full-stack development with suitable real-world examples.
+Frontend Development: Refers to the "client-side" of an application—everything a user sees and interacts with directly on the browser screen (layouts, buttons, text, images, and animations).
+oReal-World Example: When browsing Amazon, the product catalog layout, search bar, image gallery, and "Add to Cart" button are built by frontend developers using HTML, CSS, and JavaScript.
+Backend Development: Refers to the "server-side" logic that works behind the scenes. It manages business logic, processes user requests, handles database interactions, and ensures secure user authentication.
+oReal-World Example: When clicking "Place Order" on Amazon, backend code processes the payment transaction, updates product inventory in the database, and sends a confirmation email.
+Full-Stack Development: Refers to developing both the frontend (client-side) and backend (server-side) portions of a web application end-to-end.
+oReal-World Example: A developer building a personal blog application from scratch—creating the HTML user interface (frontend) while simultaneously writing API endpoints and database queries (backend) to store and fetch blog posts.
+Question 2: Create a simple diagram showing how the client-server model works in web architecture.
+
+┌──────────────────────┐                    ┌──────────────────────┐
+ │     Web Browser      │  ── 1. HTTP Request ──> │      Web Server      │
+ │       (Client)       │                    │      (Backend)       │
+ │                      │  <── 2. HTTP Response ── │                      │
+ └──────────────────────┘                    └──────────────────────┘
+   (User enters URL or                         (Processes request &
+    clicks a button)                            returns HTML/CSS/JS)
+Question 3: Describe how a browser requests and displays a web page from a web server.
+1.URL Input & DNS Resolution: The user types a URL (e.g., [https://example.com](https://example.com)) into the browser. The browser contacts a Domain Name System (DNS) server to translate the human-readable domain name into an IP address (e.g., 192.0.2.1).
+2.TCP/TLS Handshake: The browser establishes a secure connection with the web server at that IP address over HTTP/HTTPS.
+3.HTTP Request Sent: The browser sends an HTTP GET request asking for the webpage files.
+4.Server Response: The web server processes the request and sends back an HTTP status code (200 OK) along with the HTML document.
+5.Parsing & DOM Construction: The browser parses the HTML code line-by-line to construct the Document Object Model (DOM) tree.
+6.Fetching External Assets: As the browser reads the HTML, it finds links to external CSS, JavaScript, and image files, and sends secondary requests to fetch them.
+7.Rendering: The browser combines the DOM and CSSOM (CSS Object Model) into a Render Tree, calculates layouts, and paints the final visual pixels onto the screen for the user.
+Question 4: Identify and list the tools required to set up a web development environment. Explain the purpose of each.
+Code Editor / IDE (e.g., Visual Studio Code): Provides an interface with syntax highlighting, auto-completion, and debugging tools to write and manage code clean and efficiently.
+Web Browser (e.g., Google Chrome): Executes HTML, CSS, and JavaScript code to render the website. It includes built-in Developer Tools (DevTools) to inspect elements, monitor network requests, and debug code.
+Version Control System (e.g., Git): Tracks changes in source code over time, allows developers to revert to previous states, and supports collaboration on projects without overwriting work.
+Package Manager & Runtime (e.g., Node.js & NPM): Node.js allows running JavaScript outside the browser (on servers/command lines), while NPM installs third-party libraries and frameworks (like React, Express, or Bootstrap).
+Question 5: Explain what a web server is and give examples of commonly used servers.
+A web server is computer software (and the underlying physical/virtual hardware) that stores website files (HTML, CSS, JS, images) and serves them to users over the internet using standard network protocols like HTTP/HTTPS.
+Commonly Used Web Servers:
+1.Nginx: High-performance HTTP server and reverse proxy widely used for handling high-traffic websites and load balancing.
+2.Apache HTTP Server: An open-source, flexible, and widely used web server software.
+3.Gunicorn / Werkzeug (Flask): Python-based WSGI application servers used to serve Python dynamic web applications.
+Question 6: Define the roles of a frontend developer, backend developer, and database administrator in a project.
+Frontend Developer: Translates UI/UX designs into working code using HTML, CSS, JavaScript, and modern frameworks (React, Vue, Angular). Ensures web pages are responsive across mobile and desktop browsers.
+Backend Developer: Builds core application logic, implements server APIs (REST/GraphQL), processes business transactions, and connects the application securely to databases and external services.
+Database Administrator (DBA): Responsible for designing, installing, configuring, securing, and optimizing database management systems (SQL/NoSQL). Ensures data integrity, creates automated backups, and Tunes database performance.
+Question 7: Install VS Code and configure it for HTML, CSS, and JavaScript development. Take a screenshot of the setup.
+Configuration Instructions:
+1.Download VS Code from code.visualstudio.com and install it.
+2.Open VS Code and navigate to the Extensions tab (Ctrl + Shift + X).
+3.Search for and install these recommended web development extensions:
+oLive Server: Launches a local development server with auto-reload.
+oPrettier - Code formatter: Formats HTML, CSS, and JavaScript code automatically.
+oAuto Rename Tag: Automatically renames paired HTML tags.
+Question 8: Explain the difference between static and dynamic websites. Provide an example of each.
+  
+Feature	Static Website	Dynamic Website
+Content	Delivers fixed content stored in raw HTML files; looks identical to every visitor.	Generates content in real-time based on database queries, user interactions, or login status.
+Database	Does not require a database backend.	Requires a database (e.g., PostgreSQL, MySQL, MongoDB).
+Speed	Very fast page load times (served directly).	Requires server-side processing before rendering.
+Example	A simple personal portfolio or resume website.	YouTube, Facebook, or an E-commerce store.
+
+
+Question 9: Research and list five web browsers. Explain how rendering engines differ between them.
+A rendering engine is the core component inside a browser that converts web code (HTML, CSS, images) into visual pixels on your display.
+1.Google Chrome: Uses the Blink rendering engine (developed by Google as part of the Chromium open-source project). Known for high JS execution speed and broad web standards support.
+2.Mozilla Firefox: Uses the Gecko rendering engine (developed independently by Mozilla). It focuses on privacy controls and open-web standards.
+3.Apple Safari: Uses the WebKit rendering engine (developed by Apple). It is heavily optimized for fast rendering and battery power efficiency on Apple hardware.
+4.Microsoft Edge: Uses the Blink rendering engine (built on top of open-source Chromium). It shares Chrome's layout rendering performance while integrating Windows resource-saving mechanisms.
+5.Brave: Uses the Blink rendering engine (Chromium-based). Shares page-rendering behavior with Chrome, but strips out trackers and ad elements prior to layout painting.
+Question 10: Draw a labeled diagram showing the basic web architecture flow — client, server, database, and APIs.
+Plaintext
+ ┌──────────────────────┐                    ┌──────────────────────┐
+ │     Client Device    │ ─── 1. API Call ──>│      Web Server      │
+ │  (Browser/Mobile App)│ <── 4. JSON Data ──│     (Backend API)    │
+ └──────────────────────┘                    └──────────┬───────────┘
+                                                        │           ▲
+                                              2. Query  │           │ 3. Data
+                                                        ▼           │
+                                             ┌─────────────────────────┐
+                                             │        Database         │
+                                             │ (MySQL/SQLite/MongoDB) │
+                                             └─────────────────────────┘
