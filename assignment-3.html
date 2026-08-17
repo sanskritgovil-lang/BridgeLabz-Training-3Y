@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Assignment - 15 Questions</title>
+</head>
+
+<body>
+
+<!-- ========================================================= -->
+<!-- QUESTION 1                                                -->
+<!-- Create a multi-section resume page using only HTML.       -->
+<!-- Include:                                                  -->
+<!-- <header> → Name & contact info                            -->
+<!-- <nav> → Quick links (About, Skills, Projects, Education)  -->
+<!-- <main> → About Me, Skills, Projects, Education            -->
+<!-- <footer> → Copyright info                                 -->
+<!-- ========================================================= -->
+
+<h1>Question 1 - Multi-Section Resume</h1>
+
+<header>
+    <h2>Sanskriti Govil</h2>
+    <p>Email: sanskriti@example.com</p>
+    <p>Phone: 9876543210</p>
+</header>
+
+<nav>
+    <a href="#about">About</a> |
+    <a href="#skills">Skills</a> |
+    <a href="#projects">Projects</a> |
+    <a href="#education">Education</a>
+</nav>
+
+<main>
+
+    <section id="about">
+        <h3>About Me</h3>
+        <p>
+            I am a B.Tech student interested in cybersecurity,
+            programming and web development.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Cybersecurity</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h3>Projects</h3>
+        <ol>
+            <li>Mini SIEM Dashboard</li>
+            <li>Resume Website</li>
+            <li>Security Log Analyzer</li>
+        </ol>
+    </section>
+
+    <section id="education">
+        <h3>Education</h3>
+
+        <table border="1">
+            <tr>
+                <th>Course</th>
+                <th>Institute</th>
+                <th>Year</th>
+            </tr>
+
+            <tr>
+                <td>B.Tech</td>
+                <td>GLA University</td>
+                <td>2028</td>
+            </tr>
+
+            <tr>
+                <td>12th</td>
+                <td>Kanha Makhan Public School</td>
+                <td>2024</td>
+            </tr>
+
+            <tr>
+                <td>10th</td>
+                <td>Kanha Makhan Public School</td>
+                <td>2022</td>
+            </tr>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sanskriti Govil. All Rights Reserved.</p>
+</footer>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 2                                                -->
+<!-- Build a Product Catalog page for an online store using    -->
+<!-- only HTML.                                                -->
+<!-- Use a table with Product Name, Description, Price,         -->
+<!-- Availability.                                             -->
+<!-- Add one image per product using <img> inside a cell.      -->
+<!-- Use colspan and rowspan where necessary.                  -->
+<!-- ========================================================= -->
+
+<h1>Question 2 - Product Catalog</h1>
+
+<table border="1" title="Product Catalog">
+
+    <tr>
+        <th colspan="4">Available Products</th>
+    </tr>
+
+    <tr>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Availability</th>
+    </tr>
+
+    <tr>
+        <td>
+            <img src="https://via.placeholder.com/100" alt="Laptop">
+            <br>
+            Laptop
+        </td>
+        <td>High performance laptop</td>
+        <td>₹50,000</td>
+        <td rowspan="2">Available</td>
+    </tr>
+
+    <tr>
+        <td>
+            <img src="https://via.placeholder.com/100" alt="Headphones">
+            <br>
+            Headphones
+        </td>
+        <td>Wireless headphones</td>
+        <td>₹2,000</td>
+    </tr>
+
+    <tr>
+        <td>
+            <img src="https://via.placeholder.com/100" alt="Smart Watch">
+            <br>
+            Smart Watch
+        </td>
+        <td>Fitness tracking smart watch</td>
+        <td>₹3,500</td>
+        <td>Out of Stock</td>
+    </tr>
+
+    <tr>
+        <td colspan="3">Total Products</td>
+        <td>3</td>
+    </tr>
+
+</table>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 3                                                -->
+<!-- Create a Course Registration Form structure using HTML   -->
+<!-- only. Include <fieldset> and <legend>, a <select>        -->
+<!-- dropdown for selecting a course, <input> fields for      -->
+<!-- name and email, and a table showing course schedules.    -->
+<!-- ========================================================= -->
+
+<h1>Question 3 - Course Registration Form</h1>
+
+<form>
+
+    <fieldset>
+        <legend>Student Information</legend>
+
+        <label>Name:</label>
+        <input type="text" name="name">
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email">
+
+        <br><br>
+
+        <label>Select Course:</label>
+
+        <select name="course">
+            <option value="html">HTML</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="cybersecurity">Cybersecurity</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </fieldset>
+
+</form>
+
+<h2>Available Course Schedule</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Instructor</th>
+    </tr>
+
+    <tr>
+        <td>Monday</td>
+        <td>10:00 AM</td>
+        <td>Mr. Sharma</td>
+    </tr>
+
+    <tr>
+        <td>Wednesday</td>
+        <td>11:00 AM</td>
+        <td>Ms. Gupta</td>
+    </tr>
+
+    <tr>
+        <td>Friday</td>
+        <td>2:00 PM</td>
+        <td>Mr. Verma</td>
+    </tr>
+
+</table>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 4                                                -->
+<!-- Create a Company Layout Page using only block-level      -->
+<!-- elements.                                                 -->
+<!-- <header> → Company name                                   -->
+<!-- <nav> → Navigation links                                  -->
+<!-- <main> → About company and Services offered              -->
+<!-- <aside> → Blockquote from company's CEO                   -->
+<!-- <footer> → Contact email and address                      -->
+<!-- ========================================================= -->
+
+<h1>Question 4 - Company Layout Page</h1>
+
+<header>
+    <h2>Tech Solutions Pvt. Ltd.</h2>
+</header>
+
+<nav>
+    <a href="#company-about">About</a> |
+    <a href="#services">Services</a> |
+    <a href="#company-contact">Contact</a>
+</nav>
+
+<main>
+
+    <section id="company-about">
+        <h3>About the Company</h3>
+
+        <p>
+            Tech Solutions is a company providing software
+            and technology solutions to businesses.
+        </p>
+    </section>
+
+    <section id="services">
+        <h3>Services Offered</h3>
+
+        <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>Cybersecurity Services</li>
+            <li>Cloud Solutions</li>
+        </ul>
+    </section>
+
+</main>
+
+<aside>
+    <h3>CEO's Message</h3>
+
+    <blockquote>
+        "Technology should make life simpler, safer and better."
+    </blockquote>
+
+    <p>— CEO, Tech Solutions</p>
+</aside>
+
+<footer id="company-contact">
+    <p>Email: info@techsolutions.com</p>
+    <p>Address: Mathura, Uttar Pradesh, India</p>
+</footer>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 5                                                -->
+<!-- Create a Nested List Structure representing:             -->
+<!-- University → Departments → Courses → Topics.              -->
+<!-- Use nested <ul> and <ol> lists properly.                  -->
+<!-- ========================================================= -->
+
+<h1>Question 5 - University Nested List</h1>
+
+<ul>
+
+    <li>
+        Computer Science Department
+
+        <ol>
+
+            <li>
+                Web Development
+
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+
+            </li>
+
+            <li>
+                Programming
+
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                </ul>
+
+            </li>
+
+        </ol>
+
+    </li>
+
+    <li>
+        Electronics Department
+
+        <ol>
+
+            <li>
+                Digital Electronics
+
+                <ul>
+                    <li>Logic Gates</li>
+                    <li>Flip Flops</li>
+                    <li>Counters</li>
+                </ul>
+
+            </li>
+
+            <li>
+                Communication Systems
+
+                <ul>
+                    <li>Signals</li>
+                    <li>Modulation</li>
+                </ul>
+
+            </li>
+
+        </ol>
+
+    </li>
+
+    <li>
+        Mechanical Department
+
+        <ol>
+
+            <li>
+                Thermodynamics
+
+                <ul>
+                    <li>Heat</li>
+                    <li>Energy</li>
+                </ul>
+
+            </li>
+
+        </ol>
+
+    </li>
+
+</ul>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 6                                                -->
+<!-- Build a Restaurant Menu Page using:                       -->
+<!-- <header> for restaurant name.                             -->
+<!-- <nav> for categories: Starters, Main Course, Desserts.    -->
+<!-- <section> for each category containing a table with       -->
+<!-- Dish Name, Description and Price.                         -->
+<!-- <footer> for contact details.                             -->
+<!-- ========================================================= -->
+
+<h1>Question 6 - Restaurant Menu</h1>
+
+<header>
+    <h2>Delicious Bites Restaurant</h2>
+</header>
+
+<nav>
+    <a href="#starters">Starters</a> |
+    <a href="#maincourse">Main Course</a> |
+    <a href="#desserts">Desserts</a>
+</nav>
+
+<section id="starters">
+
+    <h3>Starters</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Dish Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Paneer Tikka</td>
+            <td>Grilled paneer with spices</td>
+            <td>₹180</td>
+        </tr>
+
+        <tr>
+            <td>Spring Rolls</td>
+            <td>Crispy vegetable rolls</td>
+            <td>₹150</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section id="maincourse">
+
+    <h3>Main Course</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Dish Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Paneer Butter Masala</td>
+            <td>Paneer cooked in creamy gravy</td>
+            <td>₹250</td>
+        </tr>
+
+        <tr>
+            <td>Veg Biryani</td>
+            <td>Rice cooked with vegetables and spices</td>
+            <td>₹200</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section id="desserts">
+
+    <h3>Desserts</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Dish Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Gulab Jamun</td>
+            <td>Sweet fried dumplings</td>
+            <td>₹100</td>
+        </tr>
+
+        <tr>
+            <td>Ice Cream</td>
+            <td>Vanilla ice cream</td>
+            <td>₹120</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<footer>
+    <p>Contact: 9876543210</p>
+    <p>Address: Mathura, Uttar Pradesh</p>
+</footer>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 7                                                -->
+<!-- Design a Conference Schedule page using HTML tables and  -->
+<!-- semantic tags.                                            -->
+<!-- The table should have Sessions: Morning, Afternoon,      -->
+<!-- Evening. Columns: Time, Topic, Speaker.                  -->
+<!-- Use <thead>, <tbody> and <tfoot>.                         -->
+<!-- ========================================================= -->
+
+<h1>Question 7 - Conference Schedule</h1>
+
+<table border="1">
+
+    <thead>
+
+        <tr>
+            <th>Session</th>
+            <th>Time</th>
+            <th>Topic</th>
+            <th>Speaker</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Morning</td>
+            <td>9:00 AM</td>
+            <td>Introduction to AI</td>
+            <td>Dr. Sharma</td>
+        </tr>
+
+        <tr>
+            <td>Morning</td>
+            <td>10:30 AM</td>
+            <td>Cybersecurity</td>
+            <td>Mr. Verma</td>
+        </tr>
+
+        <tr>
+            <td>Afternoon</td>
+            <td>1:00 PM</td>
+            <td>Cloud Computing</td>
+            <td>Ms. Gupta</td>
+        </tr>
+
+        <tr>
+            <td>Afternoon</td>
+            <td>2:30 PM</td>
+            <td>Web Development</td>
+            <td>Mr. Singh</td>
+        </tr>
+
+        <tr>
+            <td>Evening</td>
+            <td>5:00 PM</td>
+            <td>Future of Technology</td>
+            <td>Dr. Kumar</td>
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+
+        <tr>
+            <td colspan="4">
+                Conference Ends at 6:00 PM
+            </td>
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 8                                                -->
+<!-- Create a Student Report Page.                             -->
+<!-- <h1> for school name.                                      -->
+<!-- <table> for marks of 5 subjects.                           -->
+<!-- Add a row showing Total and Percentage.                    -->
+<!-- Use rowspan, colspan and title attributes.                -->
+<!-- ========================================================= -->
+
+<h1>Question 8 - Student Report</h1>
+
+<h1>Kanha Makhan Public School</h1>
+
+<table border="1" title="Student Marks Report">
+
+    <tr>
+        <th rowspan="2">Student Name</th>
+        <th colspan="5">Subjects</th>
+        <th rowspan="2">Result</th>
+    </tr>
+
+    <tr>
+        <th>English</th>
+        <th>Maths</th>
+        <th>Science</th>
+        <th>Computer</th>
+        <th>Hindi</th>
+    </tr>
+
+    <tr>
+        <td>Sanskriti Govil</td>
+        <td>85</td>
+        <td>90</td>
+        <td>82</td>
+        <td>95</td>
+        <td>88</td>
+        <td>Pass</td>
+    </tr>
+
+    <tr>
+        <td colspan="5">Total and Percentage</td>
+        <td>440 / 500</td>
+        <td>88%</td>
+    </tr>
+
+</table>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 9                                                -->
+<!-- Build a Travel Destination Page.                          -->
+<!-- <header> with title "Top 3 Travel Destinations".          -->
+<!-- <main> containing three <article>s.                       -->
+<!-- Each article has <h2>, image, paragraph and <blockquote>. -->
+<!-- <aside> listing Travel Tips as an unordered list.         -->
+<!-- <footer> with copyright notice.                            -->
+<!-- ========================================================= -->
+
+<h1>Question 9 - Travel Destination Page</h1>
+
+<header>
+    <h2>Top 3 Travel Destinations</h2>
+</header>
+
+<main>
+
+    <article>
+
+        <h2>Manali</h2>
+
+        <img src="https://via.placeholder.com/300x150"
+             alt="Manali">
+
+        <p>
+            Manali is a beautiful hill station famous for
+            mountains, snow and scenic views.
+        </p>
+
+        <blockquote>
+            "A perfect place for nature lovers."
+        </blockquote>
+
+    </article>
+
+    <article>
+
+        <h2>Goa</h2>
+
+        <img src="https://via.placeholder.com/300x150"
+             alt="Goa">
+
+        <p>
+            Goa is famous for beaches, beautiful sunsets
+            and relaxing vacations.
+        </p>
+
+        <blockquote>
+            "The perfect destination for a beach holiday."
+        </blockquote>
+
+    </article>
+
+    <article>
+
+        <h2>Jaipur</h2>
+
+        <img src="https://via.placeholder.com/300x150"
+             alt="Jaipur">
+
+        <p>
+            Jaipur is known for its forts, palaces and
+            rich cultural heritage.
+        </p>
+
+        <blockquote>
+            "A wonderful combination of history and culture."
+        </blockquote>
+
+    </article>
+
+</main>
+
+<aside>
+
+    <h2>Travel Tips</h2>
+
+    <ul>
+        <li>Carry necessary documents.</li>
+        <li>Check the weather before travelling.</li>
+        <li>Keep emergency numbers with you.</li>
+        <li>Carry enough water.</li>
+    </ul>
+
+</aside>
+
+<footer>
+    <p>&copy; 2026 Travel Guide</p>
+</footer>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 10                                               -->
+<!-- Create a Dropdown-based Selection Page.                    -->
+<!-- Add multiple <select> dropdowns for:                       -->
+<!-- Country, State, City, Favorite Tourist Place.              -->
+<!-- Each dropdown must have a pre-selected option.             -->
+<!-- Add a <p> summarizing your choices.                        -->
+<!-- ========================================================= -->
+
+<h1>Question 10 - Dropdown Selection Page</h1>
+
+<label>Country:</label>
+
+<select>
+
+    <option selected>India</option>
+    <option>USA</option>
+    <option>UK</option>
+    <option>Australia</option>
+
+</select>
+
+<br><br>
+
+<label>State:</label>
+
+<select>
+
+    <option selected>Uttar Pradesh</option>
+    <option>Rajasthan</option>
+    <option>Maharashtra</option>
+    <option>Goa</option>
+
+</select>
+
+<br><br>
+
+<label>City:</label>
+
+<select>
+
+    <option selected>Mathura</option>
+    <option>Agra</option>
+    <option>Jaipur</option>
+    <option>Delhi</option>
+
+</select>
+
+<br><br>
+
+<label>Favorite Tourist Place:</label>
+
+<select>
+
+    <option selected>Vrindavan</option>
+    <option>Taj Mahal</option>
+    <option>Goa Beach</option>
+    <option>Hawa Mahal</option>
+
+</select>
+
+<p>
+    My choices are India as the country, Uttar Pradesh as the
+    state, Mathura as the city, and Vrindavan as my favorite
+    tourist place.
+</p>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 11                                               -->
+<!-- Design a News Layout Page.                                -->
+<!-- <header> → Site name                                     -->
+<!-- <nav> → News Categories (Sports, Technology, Politics)    -->
+<!-- <main> → 3 <article>s with headline, date using <time>,   -->
+<!-- short content and source link.                            -->
+<!-- <aside> → Popular Topics list                             -->
+<!-- <footer> → Contact and rights information                  -->
+<!-- ========================================================= -->
+
+<h1>Question 11 - News Layout Page</h1>
+
+<header>
+    <h2>Daily News</h2>
+</header>
+
+<nav>
+    <a href="#">Sports</a> |
+    <a href="#">Technology</a> |
+    <a href="#">Politics</a>
+</nav>
+
+<main>
+
+    <article>
+
+        <h2>India Wins Technology Award</h2>
+
+        <time datetime="2026-08-17">
+            August 17, 2026
+        </time>
+
+        <p>
+            India has achieved a major milestone in the field
+            of technology and innovation.
+        </p>
+
+        <a href="#">Source: News Website</a>
+
+    </article>
+
+    <article>
+
+        <h2>New Technology Trends</h2>
+
+        <time datetime="2026-08-16">
+            August 16, 2026
+        </time>
+
+        <p>
+            Artificial intelligence and cloud computing continue
+            to influence the technology industry.
+        </p>
+
+        <a href="#">Source: Technology News</a>
+
+    </article>
+
+    <article>
+
+        <h2>Major Sports Event Announced</h2>
+
+        <time datetime="2026-08-15">
+            August 15, 2026
+        </time>
+
+        <p>
+            A major international sports event has been announced
+            for next year.
+        </p>
+
+        <a href="#">Source: Sports News</a>
+
+    </article>
+
+</main>
+
+<aside>
+
+    <h2>Popular Topics</h2>
+
+    <ul>
+        <li>Artificial Intelligence</li>
+        <li>Cricket</li>
+        <li>Cybersecurity</li>
+        <li>Technology</li>
+    </ul>
+
+</aside>
+
+<footer>
+    <p>Contact: news@example.com</p>
+    <p>&copy; 2026 Daily News. All Rights Reserved.</p>
+</footer>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 12                                               -->
+<!-- Create a Quotation Showcase Page.                         -->
+<!-- Add three <blockquote> quotes from different authors.     -->
+<!-- Include <cite> for each author.                            -->
+<!-- Wrap each quote inside a <section> and give each <h2>.     -->
+<!-- End with a paragraph summarizing why quotes inspire people. -->
+<!-- ========================================================= -->
+
+<h1>Question 12 - Quotation Showcase</h1>
+
+<section>
+
+    <h2>Motivation</h2>
+
+    <blockquote>
+        "The future depends on what you do today."
+    </blockquote>
+
+    <cite>— Mahatma Gandhi</cite>
+
+</section>
+
+<section>
+
+    <h2>Success</h2>
+
+    <blockquote>
+        "Success is not final, failure is not fatal."
+    </blockquote>
+
+    <cite>— Winston Churchill</cite>
+
+</section>
+
+<section>
+
+    <h2>Dreams</h2>
+
+    <blockquote>
+        "The only limit to our realization of tomorrow is our doubts of today."
+    </blockquote>
+
+    <cite>— Franklin D. Roosevelt</cite>
+
+</section>
+
+<p>
+    Quotes inspire people by providing motivation, hope and
+    positive thoughts during difficult situations.
+</p>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 13                                               -->
+<!-- Build a Blog Layout Page using HTML5 semantic structure.   -->
+<!-- <header> → Blog name                                      -->
+<!-- <nav> → Menu (Home, Blogs, About)                          -->
+<!-- <main> → Two articles:                                     -->
+<!-- "My First Blog" and "Things I Learned This Week"          -->
+<!-- Each article should have heading, paragraph, <time> and   -->
+<!-- <blockquote>.                                              -->
+<!-- <footer> → "Written by [Your Name]".                       -->
+<!-- ========================================================= -->
+
+<h1>Question 13 - Blog Layout Page</h1>
+
+<header>
+    <h2>Sanskriti's Blog</h2>
+</header>
+
+<nav>
+    <a href="#">Home</a> |
+    <a href="#">Blogs</a> |
+    <a href="#">About</a>
+</nav>
+
+<main>
+
+    <article>
+
+        <h2>My First Blog</h2>
+
+        <time datetime="2026-08-17">
+            August 17, 2026
+        </time>
+
+        <p>
+            This is my first blog. I am learning HTML and
+            exploring web development.
+        </p>
+
+        <blockquote>
+            "Every expert was once a beginner."
+        </blockquote>
+
+    </article>
+
+    <article>
+
+        <h2>Things I Learned This Week</h2>
+
+        <time datetime="2026-08-16">
+            August 16, 2026
+        </time>
+
+        <p>
+            This week I learned about HTML semantic tags,
+            tables, forms and lists.
+        </p>
+
+        <blockquote>
+            "Learning never stops."
+        </blockquote>
+
+    </article>
+
+</main>
+
+<footer>
+    <p>Written by Sanskriti Govil</p>
+</footer>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 14                                               -->
+<!-- Create a Movie Database Page using a <table>.             -->
+<!-- Columns: Movie Name, Genre, Year, IMDB Rating and Link.   -->
+<!-- Include border, title and colspan attributes.              -->
+<!-- Add a caption at the top and a note at the bottom using    -->
+<!-- <small>.                                                   -->
+<!-- ========================================================= -->
+
+<h1>Question 14 - Movie Database Page</h1>
+
+<table border="1" title="Movie Database">
+
+    <caption>
+        <h2>Movie Database</h2>
+    </caption>
+
+    <tr>
+        <th>Movie Name</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>IMDB Rating</th>
+        <th>Link</th>
+    </tr>
+
+    <tr>
+        <td>3 Idiots</td>
+        <td>Comedy / Drama</td>
+        <td>2009</td>
+        <td>8.4</td>
+        <td>
+            <a href="#">IMDB</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Dangal</td>
+        <td>Sports / Drama</td>
+        <td>2016</td>
+        <td>8.3</td>
+        <td>
+            <a href="#">IMDB</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Taare Zameen Par</td>
+        <td>Drama</td>
+        <td>2007</td>
+        <td>8.3</td>
+        <td>
+            <a href="#">IMDB</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="5">
+            <small>
+                Note: IMDb ratings may change over time.
+            </small>
+        </td>
+    </tr>
+
+</table>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- QUESTION 15                                               -->
+<!-- Build a Portfolio Layout Page using HTML only.            -->
+<!-- <header> → Your name and role                             -->
+<!-- <nav> → Navigation links                                  -->
+<!-- <main> → About Me, Skills and Projects                    -->
+<!-- <aside> → Contact information                             -->
+<!-- <footer> → Closing copyright line                         -->
+<!-- ========================================================= -->
+
+<h1>Question 15 - Portfolio Layout Page</h1>
+
+<header>
+
+    <h2>Sanskriti Govil</h2>
+
+    <p>
+        B.Tech Student | Cybersecurity Enthusiast
+    </p>
+
+</header>
+
+<nav>
+
+    <a href="#portfolio-about">About Me</a> |
+    <a href="#portfolio-skills">Skills</a> |
+    <a href="#portfolio-projects">Projects</a> |
+    <a href="#portfolio-contact">Contact</a>
+
+</nav>
+
+<main>
+
+    <section id="portfolio-about">
+
+        <h3>About Me</h3>
+
+        <p>
+            I am a B.Tech student interested in cybersecurity,
+            programming and web development. I enjoy learning
+            new technologies and building practical projects.
+        </p>
+
+        <blockquote>
+            "The best way to predict the future is to create it."
+        </blockquote>
+
+    </section>
+
+    <section id="portfolio-skills">
+
+        <h3>Skills</h3>
+
+        <ul>
+            <li>HTML</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Cybersecurity</li>
+            <li>Linux</li>
+        </ul>
+
+    </section>
+
+    <section id="portfolio-projects">
+
+        <h3>Projects</h3>
+
+        <ol>
+            <li>Mini SIEM Dashboard</li>
+            <li>Security Log Analyzer</li>
+            <li>Personal Portfolio Website</li>
+        </ol>
+
+    </section>
+
+</main>
+
+<aside id="portfolio-contact">
+
+    <h3>Contact Information</h3>
+
+    <p>Email: sanskriti@example.com</p>
+
+    <p>Phone: 9876543210</p>
+
+    <p>
+        LinkedIn:
+        <a href="#">My LinkedIn Profile</a>
+    </p>
+
+</aside>
+
+<footer>
+
+    <p>
+        &copy; 2026 Sanskriti Govil. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
