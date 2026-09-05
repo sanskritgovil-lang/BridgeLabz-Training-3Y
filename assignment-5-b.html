@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mathura</title>
+    <style>
+        /* Base Styles & Box Model */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* * REQUIREMENT: Include <header>, <nav>, <main>, and <footer>
+         */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 5px solid #e74c3c; /* Box Model: Border */
+        }
+
+        nav {
+            margin-top: 10px; /* Box Model: Margin */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px; /* Box Model: Padding */
+        }
+
+        nav a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        /* * REQUIREMENT: Headings must use different font sizes and weights 
+         */
+        h1 {
+            font-size: 3rem;
+            font-weight: 800; /* Extra bold */
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600; /* Semi-bold */
+            margin-bottom: 1rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 400; /* Regular */
+            margin-bottom: 1rem;
+        }
+
+        /* * REQUIREMENT: Each section in <main> should have a full-width background color or image.
+         */
+        section {
+            width: 100%;
+            padding: 6rem 2rem; /* Box Model: Padding to create clear sections */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 2px solid #ddd; /* Box Model: Border */
+        }
+
+        /* Content Box for readability over backgrounds */
+        .content-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* * REQUIREMENT: Apply a linear gradient in one section 
+         */
+        #intro {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #222;
+        }
+
+        /* * REQUIREMENT: background-attachment: fixed; (Parallax Section 1) 
+         */
+        #heritage {
+            /* Using a placeholder image of a temple landscape */
+            background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* PARALLAX EFFECT */
+            min-height: 80vh;
+        }
+
+        /* * REQUIREMENT: Apply a radial gradient in another section
+         */
+        #culture {
+            background: radial-gradient(circle, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+        
+        #culture h2, #culture p {
+            color: white;
+            text-shadow: none;
+        }
+        
+        #culture .content-box {
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+        }
+
+        /* * REQUIREMENT: background-attachment: fixed; (Parallax Section 2) 
+         */
+        #visit {
+            /* Using a placeholder image of a city riverway */
+            background-image: url('https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* PARALLAX EFFECT */
+            min-height: 80vh;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Discover Mathura</h1>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#heritage">Heritage</a>
+            <a href="#culture">Culture</a>
+            <a href="#visit">Visit</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="intro">
+            <div class="content-box">
+                <h2>The Heart of Braj</h2>
+                <p>Welcome to Mathura, an ancient city in Uttar Pradesh, renowned as the birthplace of Lord Krishna. It is one of the sapta puris, the seven cities considered holy by Hindus.</p>
+            </div>
+        </section>
+
+        <section id="heritage">
+            <h2>Ancient Heritage</h2>
+        </section>
+
+        <section id="culture">
+            <div class="content-box">
+                <h2>Vibrant Culture</h2>
+                <p>From the spectacular celebrations of Holi to the intricate art of Sanjhi, Mathura is a thriving hub of culture, devotion, and traditional Indian artistry.</p>
+            </div>
+        </section>
+
+        <section id="visit">
+            <h2>Plan Your Journey</h2>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Explore the incredible history of India.</h3>
+        <p>&copy; 2026 Informational Webpage Project.</p>
+    </footer>
+
+</body>
+</html>
+
