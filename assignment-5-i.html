@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Newspaper Layout</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            padding: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+            color: #333;
+        }
+
+        .newspaper {
+            /* Column CSS Requirements */
+            column-count: 3;
+            column-gap: 40px;
+            text-align: justify;
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            /* Spans across all columns */
+            column-span: all;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .floated-img {
+            /* Float requirement */
+            float: left;
+            margin: 0 15px 10px 0;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        /* Clean resizing */
+        @media (max-width: 800px) { .newspaper { column-count: 2; } }
+        @media (max-width: 500px) { .newspaper { column-count: 1; } }
+    </style>
+</head>
+<body>
+    <div class="newspaper">
+        <h1>The Daily Developer</h1>
+        <img src="https://via.placeholder.com/200" alt="News Image" class="floated-img">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p>Phasellus scelerisque tempor urna, id tincidunt nisi dictumst. Sed in urna id nulla tristique varius at vel ligula. Etiam mattis pulvinar sapien sed elementum. Ut congue massa sed vehicula aliquam. Aliquam id massa sed velit bibendum rutrum non vel lacus. Vivamus ac libero ex. Nunc pellentesque nisl ac velit fermentum.</p>
+        <p>Curabitur eleifend nisi in erat efficitur tempor. Ut scelerisque id velit id ultricies. Cras finibus diam leo, nec viverra lectus maximus at. Aenean pretium sit amet nunc eu varius. Aenean finibus mauris id est vehicula efficitur. Integer eget magna sit amet tellus eleifend tincidunt quis sed massa.</p>
+    </div>
+</body>
+</html>
