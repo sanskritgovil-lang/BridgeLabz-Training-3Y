@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7 - User Interface Components Page</title>
+    <!-- Link to the separate external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Semantic Header element -->
+    <header>
+        <h1>User Interface Components Page</h1>
+        <p>A compact dashboard card featuring a search bar, dropdown, and action buttons.</p>
+    </header>
+
+    <!-- Semantic Main content element -->
+    <main>
+        <!-- Card-like container aligned using Flexbox -->
+        <section class="card-wrapper">
+            <div class="ui-card">
+                <h2>Dashboard Controls</h2>
+                
+                <!-- Search Bar Input Component -->
+                <div class="input-group">
+                    <label for="search-bar">Search Content</label>
+                    <input type="text" id="search-bar" class="ui-input" placeholder="Type to search...">
+                </div>
+
+                <!-- Dropdown Menu Component -->
+                <div class="input-group">
+                    <label for="category-select">Filter Category</label>
+                    <select id="category-select" class="ui-select">
+                        <option value="all">All Categories</option>
+                        <option value="tech">Technology</option>
+                        <option value="design">Design</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+
+                <!-- Buttons Component Group -->
+                <div class="button-group">
+                    <button class="ui-btn primary-btn">Apply Filter</button>
+                    <button class="ui-btn secondary-btn">Clear</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Semantic Footer element -->
+    <footer>
+        <p>&copy; 2026 Web Design Assignment - Question 7</p>
+    </footer>
+
+</body>
+</html>

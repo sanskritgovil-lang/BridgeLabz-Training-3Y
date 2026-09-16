@@ -1,0 +1,138 @@
+/* Global Reset and Layout Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid #334155;
+}
+
+header p {
+    margin-top: 5px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Main Area Center Alignment using Flexbox */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Flexbox container centering animations vertically and horizontally */
+.animation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: #1e293b;
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 1. First Animated Element: Moving Box */
+.animated-box {
+    width: 60px;
+    height: 60px;
+    background-color: #38bdf8;
+    border-radius: 8px;
+    animation-name: slideBox;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* 2. Second Animated Element: Bouncing Ball */
+.animated-ball {
+    width: 50px;
+    height: 50px;
+    background-color: #f43f5e;
+    border-radius: 50%;
+    animation-name: bounceBall;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s; /* Demonstrating animation-delay */
+}
+
+/* 3. Third Animated Element: Color-Changing & Scaling Text */
+.animated-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation-name: pulseText;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* --- KEYFRAME DEFINITIONS --- */
+
+@keyframes slideBox {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        background-color: #38bdf8;
+    }
+    100% {
+        transform: translateX(180px) rotate(180deg);
+        background-color: #0ea5e9;
+    }
+}
+
+@keyframes bounceBall {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60px);
+        background-color: #fb7185;
+    }
+}
+
+@keyframes pulseText {
+    0% {
+        color: #f8fafc;
+        transform: scale(1);
+    }
+    50% {
+        color: #34d399;
+        transform: scale(1.08);
+    }
+    100% {
+        color: #fbbf24;
+        transform: scale(1);
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
+    border-top: 1px solid #334155;
+}

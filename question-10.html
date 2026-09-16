@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10 - Complete Mini User Interface Layout</title>
+    <!-- Link to the separate external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Semantic Header element -->
+    <header>
+        <h1>Mini Dashboard Portal</h1>
+        <p>Complete UI Layout with interactive form elements and card styling.</p>
+    </header>
+
+    <!-- Semantic Main content area using Flexbox alignment -->
+    <main class="main-container">
+        <!-- Main Content Card -->
+        <article class="ui-card">
+            
+            <!-- Small Image inside the main card -->
+            <div class="card-image-wrapper">
+                <img src="https://picsum.photos/id/10/400/200" alt="Scenic workspace preview">
+            </div>
+
+            <!-- Card Header info -->
+            <div class="card-header-text">
+                <h2>User Sign In</h2>
+                <p>Please enter your credentials to access your account.</p>
+            </div>
+
+            <!-- Form element inside main card -->
+            <form class="ui-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" placeholder="Enter username..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password..." required>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn primary-btn">Sign In</button>
+                    <button type="button" class="btn secondary-btn">Cancel</button>
+                </div>
+            </form>
+
+        </article>
+    </main>
+
+    <!-- Semantic Footer element -->
+    <footer>
+        <p>&copy; 2026 Mini User Interface Layout - Question 10</p>
+    </footer>
+
+</body>
+</html>

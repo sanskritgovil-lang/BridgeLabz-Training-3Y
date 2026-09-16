@@ -1,0 +1,103 @@
+/* Global Reset and Body Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+header p {
+    margin-top: 6px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Main Area Layout */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Six Images Grid Layout */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Individual Figure Styling with rounded corners and modern box-shadow */
+.showcase-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    background-color: #000000;
+}
+
+/* Image Scaling and Transition Setup */
+.showcase-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Caption styling overlaying or positioned below */
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect: slightly scale up and darken via opacity adjustment */
+.showcase-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.75;
+}
+
+/* Responsive Behavior: Stack images in one column below 700px */
+@media (max-width: 700px) {
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
+}

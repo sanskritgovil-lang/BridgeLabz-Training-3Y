@@ -1,0 +1,165 @@
+/* Global Reset applying consistent box-sizing via border-box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Main Area Alignment using Flexbox for full responsiveness */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Content Card with shadows, rounded border styles, and consistent spacing */
+.ui-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Small Image Styling */
+.card-image-wrapper img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Card Text Styling */
+.card-header-text h2 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.card-header-text p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Form Layout */
+.ui-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #475569;
+}
+
+/* Input Styles */
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+/* Focus effects using pseudo-classes */
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Button Group Layout */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Button Base Styles */
+.btn {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Primary Button & Hover Pseudo-class */
+.primary-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+}
+
+/* Secondary Button & Hover Pseudo-class */
+.secondary-btn {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.secondary-btn:hover {
+    background-color: #cbd5e1;
+}
+
+.secondary-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.85rem;
+}

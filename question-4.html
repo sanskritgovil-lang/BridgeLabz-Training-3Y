@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4 - CSS Selectors Practice</title>
+    <!-- Link to the separate external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Semantic Header element with ID selector applied -->
+    <header id="main-header">
+        <h1>CSS Selectors Practice Page</h1>
+        <p>Demonstrating various CSS selector types and combinators.</p>
+    </header>
+
+    <!-- Semantic Main content element -->
+    <main class="content-container">
+        
+        <!-- Element Selector and Adjacent Sibling Selector Demo -->
+        <section class="selector-section">
+            <h2>Understanding Element and Sibling Selectors</h2>
+            <p>This paragraph is directly styled using a general element selector.</p>
+            <p class="special-sibling">This paragraph has a class and is followed by a sibling paragraph.</p>
+            <p>This paragraph is an adjacent sibling of the one above it and receives special coloring.</p>
+        </section>
+
+        <!-- Descendant and Child Selector Demo -->
+        <section class="selector-section">
+            <h2>Hierarchical Combinators</h2>
+            <div class="nested-box">
+                <p>This paragraph is a <strong>descendant</strong> inside a div container.</p>
+                <ul>
+                    <li>Direct child list item 1 (Child Selector >)</li>
+                    <li>Direct child list item 2</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Attribute Selector Demo -->
+        <section class="selector-section">
+            <h2>Attribute Selectors</h2>
+            <form>
+                <input type="text" placeholder="Text input (styled via attribute)">
+                <input type="password" placeholder="Password input">
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Semantic Footer element -->
+    <footer>
+        <p>&copy; 2026 CSS Selectors Practice Assignment</p>
+    </footer>
+
+</body>
+</html>
