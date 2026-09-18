@@ -1,153 +1,17 @@
-/* Global Reset and Box Sizing */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background-color: #f1f5f9; color: #334155; display: flex; flex-direction: column; min-height: 100vh; animation: fadeIn 0.8s ease-in-out; }
+.site-header { background-color: #0f172a; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+.logo { font-weight: bold; color: #38bdf8; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+.main-content, .main-grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; width: 100%; margin: 30px auto; padding: 0 20px; }
+.grid-section { background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.03); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.grid-section img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; margin-top: 10px; }
+.grid-section:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.08); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 700px) {
+    .main-grid { grid-template-columns: 1fr; }
+    .site-header { flex-direction: column; gap: 10px; text-align: center; }
 }
-
-body {
-    font-family: Arial, sans-serif;
-    /* Soft background gradient for an appealing interface */
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header Styling */
-header {
-    background-color: #2c3e50;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-}
-
-header p {
-    margin-top: 5px;
-    color: #bdc3c7;
-    font-size: 0.95rem;
-}
-
-/* Main Area Alignment using Flexbox */
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Flexbox wrapper to center the card container */
-.card-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Card-like Container using Flexbox with consistent styling, shadows, and rounded corners */
-.ui-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 380px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.ui-card h2 {
-    font-size: 1.25rem;
-    color: #2c3e50;
-    border-bottom: 2px solid #f0f2f5;
-    padding-bottom: 10px;
-}
-
-/* Input Group Layout */
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.input-group label {
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #555555;
-}
-
-/* Consistent styling for search input and dropdown menu */
-.ui-input, .ui-select {
-    padding: 10px 12px;
-    border: 1px solid #ccd1d9;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    background-color: #fafbfc;
-    transition: all 0.3s ease;
-}
-
-/* Highlight focused elements using :focus pseudo-class */
-.ui-input:focus, .ui-select:focus {
-    outline: none;
-    border-color: #3498db;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
-/* Button Group Styling */
-.button-group {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-}
-
-/* General Button Styling */
-.ui-btn {
-    flex: 1;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-/* Primary Button Styles & :hover/:active states */
-.primary-btn {
-    background-color: #3498db;
-    color: #ffffff;
-}
-
-.primary-btn:hover {
-    background-color: #2980b9;
-}
-
-.primary-btn:active {
-    transform: scale(0.98);
-}
-
-/* Secondary Button Styles & :hover/:active states */
-.secondary-btn {
-    background-color: #e2e8f0;
-    color: #475569;
-}
-
-.secondary-btn:hover {
-    background-color: #cbd5e1;
-}
-
-.secondary-btn:active {
-    transform: scale(0.98);
-}
-
-/* Footer Styling */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 0.85rem;
-}
+.site-footer { background-color: #0f172a; color: #94a3b8; text-align: center; padding: 15px; font-size: 0.85rem; }

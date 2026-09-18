@@ -3,51 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 9 - Combined Effects Demonstration</title>
-    <!-- Link to the separate external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <title>Responsive Design Principles Summary</title>
+    <link rel="stylesheet" href="responsive-design-principles.css">
 </head>
 <body>
-
-    <!-- Semantic Header element -->
-    <header>
-        <h1>Combined Effects Demonstration</h1>
-        <p>Showcasing the integration of pseudo-classes, transformations, and smooth transitions.</p>
+    <header class="site-header">
+        <h1>Responsive Design Principles</h1>
+        <p>Core concepts visualized with definitions and code examples.</p>
     </header>
-
-    <!-- Semantic Main content element -->
-    <main>
-        <!-- Flexbox container distributing multiple interactive cards evenly -->
-        <section class="effects-container">
-            
-            <!-- Combined Effect Card 1 -->
-            <div class="effect-card">
-                <h3>Card Element One</h3>
-                <p>Hover over this card to experience scaling, elevation, and background color shifts.</p>
-                <button class="card-btn">Explore More</button>
-            </div>
-
-            <!-- Combined Effect Card 2 -->
-            <div class="effect-card">
-                <h3>Card Element Two</h3>
-                <p>Combines smooth cubic-bezier transitions with active click transformations.</p>
-                <button class="card-btn">Explore More</button>
-            </div>
-
-            <!-- Combined Effect Card 3 -->
-            <div class="effect-card">
-                <h3>Card Element Three</h3>
-                <p>Enhanced with subtle box-shadow depth and fluid positioning changes.</p>
-                <button class="card-btn">Explore More</button>
-            </div>
-
+    <main class="main-content">
+        <section class="principles-grid">
+            <article class="principle-box">
+                <h3>Fluid Layouts</h3>
+                <p>Uses relative units like percentages and fractional units instead of fixed pixels.</p>
+                <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>
+            </article>
+            <article class="principle-box">
+                <h3>Flexible Media</h3>
+                <p>Ensures images and video containers scale smoothly inside their parents.</p>
+                <code>img { max-width: 100%; height: auto; }</code>
+            </article>
+            <article class="principle-box">
+                <h3>Breakpoints</h3>
+                <p>Applies conditional rules based on device screen widths using queries.</p>
+                <code>@media (max-width: 600px) { ... }</code>
+            </article>
         </section>
     </main>
-
-    <!-- Semantic Footer element -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 Web Design Assignment - Question 9</p>
     </footer>
-
 </body>
 </html>

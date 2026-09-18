@@ -3,65 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 3 - Image Showcase Layout</title>
+    <title>Responsive Cards with Media Queries</title>
     <!-- Link to the separate external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive-cards-media-queries.css">
 </head>
 <body>
 
     <!-- Semantic Header element -->
-    <header>
-        <h1>Image Showcase Layout</h1>
-        <p>A responsive gallery of six images with modern hover effects and captions.</p>
+    <header class="site-header">
+        <h1>Responsive Cards Layout</h1>
+        <p>Adapting card columns across desktop, tablet, and mobile breakpoints.</p>
     </header>
 
-    <!-- Semantic Main content element -->
-    <main>
-        <!-- Showcase Container using CSS Grid -->
-        <section class="showcase-grid">
+    <!-- Semantic Main content area -->
+    <main class="main-content">
+        <!-- Flexbox container holding four cards -->
+        <section class="cards-container">
             
-            <!-- Image 1 -->
-            <figure class="showcase-item">
-                <img src="https://picsum.photos/id/1015/400/300" alt="Nature landscape view">
-                <figcaption>Mountain River</figcaption>
-            </figure>
+            <div class="card">
+                <h3>Card One</h3>
+                <p>Designed for multi-column desktop views and fluid scaling behavior.</p>
+            </div>
 
-            <!-- Image 2 -->
-            <figure class="showcase-item">
-                <img src="https://picsum.photos/id/1025/400/300" alt="Cute puppy dog">
-                <figcaption>Loyal Companion</figcaption>
-            </figure>
+            <div class="card">
+                <h3>Card Two</h3>
+                <p>Adapts gracefully to tablet grid requirements using clean media queries.</p>
+            </div>
 
-            <!-- Image 3 -->
-            <figure class="showcase-item">
-                <img src="https://picsum.photos/id/1035/400/300" alt="Ancient architecture building">
-                <figcaption>Historic Architecture</figcaption>
-            </figure>
+            <div class="card">
+                <h3>Card Three</h3>
+                <p>Provides clear spacing and padding for enhanced visual balance.</p>
+            </div>
 
-            <!-- Image 4 -->
-            <figure class="showcase-item">
-                <img src="https://picsum.photos/id/1045/400/300" alt="Ocean waves on a beach">
-                <figcaption>Ocean Sunset</figcaption>
-            </figure>
-
-            <!-- Image 5 -->
-            <figure class="showcase-item">
-                <img src="https://picsum.photos/id/1055/400/300" alt="Forest trees and sunlight">
-                <figcaption>Misty Forest</figcaption>
-            </figure>
-
-            <!-- Image 6 -->
-            <figure class="showcase-item">
-                <img src="https://picsum.photos/id/1065/400/300" alt="City skyline at night">
-                <figcaption>Urban Skyline</figcaption>
-            </figure>
+            <div class="card">
+                <h3>Card Four</h3>
+                <p>Stacks neatly into a single column format for small mobile screens.</p>
+            </div>
 
         </section>
     </main>
 
     <!-- Semantic Footer element -->
-    <footer>
-        <p>&copy; 2026 Web Design Assignment - Question 3</p>
+    <footer class="site-footer">
+        <p>&copy; 2026 Responsive Web Design Assignment - Question 3</p>
     </footer>
 
 </body>

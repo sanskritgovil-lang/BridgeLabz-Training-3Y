@@ -3,62 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 1 - Pseudo-Classes Demonstration</title>
+    <title>Responsive Image Filter Gallery</title>
     <!-- Link to the separate external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image-filter-gallery.css">
 </head>
 <body>
 
     <!-- Semantic Header element -->
     <header>
-        <h1>CSS Pseudo-Classes Demonstration</h1>
-        <p>Explore state-based and structural pseudo-classes applied to various elements.</p>
+        <h1>Responsive Image Filter Gallery</h1>
+        <p>Hover over any image to remove its CSS filter effect smoothly.</p>
     </header>
 
     <!-- Semantic Main content element -->
     <main>
-        <!-- Section utilizing Flexbox to align all examples in one row -->
-        <section class="examples-container">
+        <!-- Grid container displaying six images -->
+        <section class="gallery-grid">
             
-            <!-- Example 1: :hover on a link -->
-            <div class="card">
-                <h3>:hover State</h3>
-                <p class="description">Triggers when the mouse cursor is placed over an element.</p>
-                <a href="#" class="demo-link">Hover over this link</a>
-            </div>
+            <!-- Image 1: Blur Filter -->
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/id/1015/400/300" alt="Landscape with river and mountains" class="filter-blur">
+                <figcaption>Blur Filter</figcaption>
+            </figure>
 
-            <!-- Example 2: :focus on an input element -->
-            <div class="card">
-                <h3>:focus State</h3>
-                <p class="description">Triggers when an element receives keyboard focus or is clicked.</p>
-                <input type="text" class="demo-input" placeholder="Click to focus me">
-            </div>
+            <!-- Image 2: Grayscale Filter -->
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/id/1025/400/300" alt="Cute puppy" class="filter-grayscale">
+                <figcaption>Grayscale Filter</figcaption>
+            </figure>
 
-            <!-- Example 3: :active on a button element -->
-            <div class="card">
-                <h3>:active State</h3>
-                <p class="description">Triggers during the exact moment an element is being clicked/activated.</p>
-                <button class="demo-button">Click & Hold Me</button>
-            </div>
+            <!-- Image 3: Sepia Filter -->
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/id/1035/400/300" alt="Historic building architecture" class="filter-sepia">
+                <figcaption>Sepia Filter</figcaption>
+            </figure>
 
-            <!-- Example 4: :nth-child() on list items -->
-            <div class="card">
-                <h3>:nth-child() Selector</h3>
-                <p class="description">Styles child elements based on their position in a parent container.</p>
-                <ul class="demo-list">
-                    <li>Item 1 (Odd)</li>
-                    <li>Item 2 (Even)</li>
-                    <li>Item 3 (Odd)</li>
-                    <li>Item 4 (Even)</li>
-                </ul>
-            </div>
+            <!-- Image 4: Brightness Filter -->
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/id/1045/400/300" alt="Ocean sunset view" class="filter-brightness">
+                <figcaption>Brightness Filter</figcaption>
+            </figure>
+
+            <!-- Image 5: Contrast Filter -->
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/id/1055/400/300" alt="Misty forest trees" class="filter-contrast">
+                <figcaption>Contrast Filter</figcaption>
+            </figure>
+
+            <!-- Image 6: Hue-Rotate Filter -->
+            <figure class="gallery-item">
+                <img src="https://picsum.photos/id/1065/400/300" alt="City skyline at night" class="filter-hue">
+                <figcaption>Hue-Rotate Filter</figcaption>
+            </figure>
 
         </section>
     </main>
 
     <!-- Semantic Footer element -->
     <footer>
-        <p>&copy; 2026 Web Design Assignment - Question 1</p>
+        <p>&copy; 2026 Responsive Web Design Assignment - Question 1</p>
     </footer>
 
 </body>

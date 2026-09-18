@@ -1,4 +1,4 @@
-/* Global Reset and Layout Alignment */
+/* Global Reset and Box-Sizing */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,122 +7,122 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    background-color: #f8fafc;
+    color: #334155;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header Styling */
-header {
-    background-color: #1e293b;
+/* Header Styling: Flexbox layout with logo on left, nav on right */
+.site-header {
+    background-color: #0f172a;
     color: #ffffff;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
 }
 
-header p {
-    margin-top: 5px;
-    color: #94a3b8;
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
     font-size: 0.95rem;
+    transition: color 0.2s ease;
 }
 
-/* Main Area using Flexbox to center elements */
-main {
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Main Area Layout */
+.main-content {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* Flexbox container for tooltip examples */
-.tooltip-container {
+/* Features Container using Flexbox arranged horizontally */
+.features-container {
     display: flex;
     flex-direction: row;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    width: 100%;
     justify-content: center;
 }
 
-/* Wrapper to position absolute tooltip relative to target element */
-.tooltip-wrapper {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* Target element appearance */
-.target-element {
+/* Individual Feature Box Styling */
+.feature-box {
     background-color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    font-weight: bold;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px 25px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    /* Smooth transition for hover scale effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box h3 {
+    font-size: 1.15rem;
     color: #0f172a;
-    display: inline-block;
-    border: 1px solid #cbd5e1;
 }
 
-.target-button {
-    background-color: #2563eb;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+.feature-box p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
 }
 
-/* Tooltip Box Style & Positioning Requirements */
-.tooltip-box {
-    visibility: hidden;
-    opacity: 0;
-    width: 160px;
+/* HOVER EFFECT: Slightly scale up with a smooth transition */
+.feature-box:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Rule: Below 750 px, stack feature boxes vertically */
+@media (max-width: 750px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-box {
+        max-width: 450px;
+        width: 100%;
+    }
+    
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Footer Styling: Centered at the bottom of the page */
+.site-footer {
     background-color: #0f172a;
-    color: #fff;
+    color: #94a3b8;
     text-align: center;
-    border-radius: 6px;
-    padding: 8px 10px;
-    position: absolute;
-    z-index: 10;
-    
-    /* Position above the hovered element */
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    /* Smooth opacity transition (0.3s ease-in-out) */
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    font-size: 0.85rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Tooltip Arrow Element pointing down */
-.tooltip-box::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #0f172a transparent transparent transparent;
-}
-
-/* Show Tooltip on Hover */
-.tooltip-wrapper:hover .tooltip-box {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #1e293b;
-    color: white;
-    text-align: center;
-    padding: 12px;
+    padding: 15px;
     font-size: 0.85rem;
 }

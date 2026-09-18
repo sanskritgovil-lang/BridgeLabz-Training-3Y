@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 2 - Tooltip Demonstration</title>
+    <title>Responsive Web Design Layout</title>
     <!-- Link to the separate external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive-web-design-layout.css">
 </head>
 <body>
 
-    <!-- Semantic Header element -->
-    <header>
-        <h1>CSS Tooltip Demonstration</h1>
-        <p>Hover over the elements below to view pure CSS tooltips.</p>
+    <!-- Semantic Header element with logo on the left and navigation on the right using Flexbox -->
+    <header class="site-header">
+        <div class="logo">BrandLogo</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
-    <!-- Semantic Main content element -->
-    <main>
-        <!-- Flexbox container centering the examples -->
-        <section class="tooltip-container">
+    <!-- Semantic Main content area -->
+    <main class="main-content">
+        <!-- Section containing three feature boxes arranged horizontally -->
+        <section class="features-container">
             
-            <!-- Tooltip Example 1: Word element -->
-            <div class="tooltip-wrapper">
-                <span class="target-element">Hover Word</span>
-                <div class="tooltip-box">This is a smooth CSS tooltip!</div>
+            <div class="feature-box">
+                <h3>Feature One</h3>
+                <p>Discover how fluid grids and flexible layouts enhance user experience across all modern desktop screens.</p>
             </div>
 
-            <!-- Tooltip Example 2: Icon element -->
-            <div class="tooltip-wrapper">
-                <span class="target-element icon-badge">ℹ️ Info Icon</span>
-                <div class="tooltip-box">Information details displayed above.</div>
+            <div class="feature-box">
+                <h3>Feature Two</h3>
+                <p>Implement responsive breakpoints smoothly to adapt your web interfaces to tablet and mobile devices.</p>
             </div>
 
-            <!-- Tooltip Example 3: Button element -->
-            <div class="tooltip-wrapper">
-                <button class="target-button">Hover Button</button>
-                <div class="tooltip-box">Action helper text description.</div>
+            <div class="feature-box">
+                <h3>Feature Three</h3>
+                <p>Leverage clean CSS transitions and scalable units for robust, modern web design applications.</p>
             </div>
 
         </section>
     </main>
 
-    <!-- Semantic Footer element -->
-    <footer>
-        <p>&copy; 2026 Web Design Assignment - Question 2</p>
+    <!-- Semantic Footer element centered at the bottom -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Responsive Web Design Assignment - Question 2</p>
     </footer>
 
 </body>

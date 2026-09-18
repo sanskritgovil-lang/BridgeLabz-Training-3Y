@@ -1,4 +1,4 @@
-/* Global Reset and Body Layout */
+/* Global Reset and Box-Sizing */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,88 +15,95 @@ body {
 }
 
 /* Header Styling */
-header {
+.site-header {
     background-color: #0f172a;
     color: #ffffff;
     text-align: center;
     padding: 25px;
 }
 
-header p {
-    margin-top: 6px;
+.site-header p {
+    margin-top: 5px;
     color: #94a3b8;
     font-size: 0.95rem;
 }
 
 /* Main Area Layout */
-main {
+.main-content {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px;
+    padding: 30px 20px;
 }
 
-/* Six Images Grid Layout */
-.showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1000px;
+/* Cards Container using Flexbox with equal spacing */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
     width: 100%;
+    justify-content: center;
 }
 
-/* Individual Figure Styling with rounded corners and modern box-shadow */
-.showcase-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    background-color: #000000;
+/* Individual Card Styling with equal padding and background hover change */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    /* Desktop: 4 columns layout calculation (accounting for gap) */
+    width: calc(25% - 15px);
+    
+    /* Smooth transition for background color change and hover effects */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image Scaling and Transition Setup */
-.showcase-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+.card h3 {
+    font-size: 1.15rem;
+    color: #0f172a;
 }
 
-/* Caption styling overlaying or positioned below */
-figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 12px 15px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 0.95rem;
-    z-index: 2;
-    transition: transform 0.3s ease;
+.card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.4;
 }
 
-/* Hover Effect: slightly scale up and darken via opacity adjustment */
-.showcase-item:hover img {
-    transform: scale(1.1);
-    opacity: 0.75;
+/* Hover Effect: Changes background color and applies subtle lift */
+.card:hover {
+    background-color: #f0f9ff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.06);
 }
 
-/* Responsive Behavior: Stack images in one column below 700px */
-@media (max-width: 700px) {
-    .showcase-grid {
-        grid-template-columns: 1fr;
+/* --- RESPONSIVE BREAKPOINTS VIA MEDIA QUERIES --- */
+
+/* Tablet (max-width: 900 px): 2 columns */
+@media (max-width: 900px) {
+    .card {
+        width: calc(50% - 15px);
+    }
+}
+
+/* Mobile (max-width: 600 px): 1 column */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
         max-width: 400px;
     }
 }
 
 /* Footer Styling */
-footer {
+.site-footer {
     background-color: #0f172a;
-    color: white;
+    color: #94a3b8;
     text-align: center;
     padding: 15px;
     font-size: 0.85rem;

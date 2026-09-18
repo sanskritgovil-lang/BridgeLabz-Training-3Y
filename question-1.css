@@ -1,4 +1,4 @@
-/* Global Reset and Base Styling */
+/* Global Reset and Box-Sizing */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    background-color: #f1f5f9;
+    color: #334155;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,138 +16,109 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #2c3e50;
+    background-color: #0f172a;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
 }
 
 header p {
     margin-top: 5px;
-    color: #bdc3c7;
+    color: #94a3b8;
     font-size: 0.95rem;
 }
 
-/* Main Layout: Centering content */
+/* Main Area Layout */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px;
+    padding: 30px 20px;
 }
 
-/* Flexbox Row Container for Examples */
-.examples-container {
-    display: flex;
-    flex-direction: row;
+/* Gallery Grid Layout using required template columns */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
+    max-width: 1000px;
+    width: 100%;
 }
 
-/* Individual Card Design */
-.card {
+/* Individual Gallery Item Container */
+.gallery-item {
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 240px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    gap: 12px;
 }
 
-.card h3 {
-    font-size: 1.1rem;
-    color: #2c3e50;
+/* Base Image Styles with smooth transition for filter removal */
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-.description {
-    font-size: 0.85rem;
-    color: #666;
-    line-height: 1.4;
-}
-
-/* 1. :hover pseudo-class implementation */
-.demo-link {
-    color: #2980b9;
-    text-decoration: none;
+/* Captions below each image */
+figcaption {
+    padding: 12px;
+    text-align: center;
     font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.demo-link:hover {
-    color: #e74c3c;
-    background-color: #fadbd8;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
-
-/* 2. :focus pseudo-class implementation */
-.demo-input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    color: #1e293b;
+    background-color: #ffffff;
 }
 
-.demo-input:focus {
-    outline: none;
-    border-color: #27ae60;
-    background-color: #e8f8f5;
-    box-shadow: 0 0 5px rgba(39, 174, 96, 0.4);
+/* --- INDIVIDUAL CSS FILTERS APPLIED --- */
+.filter-blur {
+    filter: blur(4px);
 }
 
-/* 3. :active pseudo-class implementation */
-.demo-button {
-    padding: 10px;
-    background-color: #8e44ad;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+.filter-grayscale {
+    filter: grayscale(100%);
 }
 
-.demo-button:active {
-    background-color: #5b2c6f;
-    transform: scale(0.96);
+.filter-sepia {
+    filter: sepia(90%);
 }
 
-/* 4. :nth-child() pseudo-class implementation */
-.demo-list {
-    list-style-type: none;
-    padding: 0;
+.filter-brightness {
+    filter: brightness(140%);
 }
 
-.demo-list li {
-    padding: 6px 8px;
-    margin-bottom: 4px;
-    border-radius: 4px;
-    font-size: 0.85rem;
+.filter-contrast {
+    filter: contrast(200%);
 }
 
-/* Style even-numbered list items */
-.demo-list li:nth-child(even) {
-    background-color: #ebf5fb;
-    color: #2471a3;
+.filter-hue {
+    filter: hue-rotate(90deg);
 }
 
-/* Style odd-numbered list items */
-.demo-list li:nth-child(odd) {
-    background-color: #fef9e7;
-    color: #b7950b;
+/* HOVER EFFECT: Remove filter smoothly and slightly zoom */
+.gallery-item:hover img {
+    filter: none;
+    transform: scale(1.05);
+}
+
+/* Responsive Behavior: Stack all images in one column below 600px */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
 }
 
 /* Footer Styling */
 footer {
-    background-color: #2c3e50;
+    background-color: #0f172a;
     color: white;
     text-align: center;
-    padding: 12px;
+    padding: 15px;
     font-size: 0.85rem;
 }

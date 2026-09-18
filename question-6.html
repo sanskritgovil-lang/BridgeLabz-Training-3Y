@@ -3,38 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 6 - CSS Animation Demonstration</title>
+    <title>Responsive CSS Cheat Sheet</title>
     <!-- Link to the separate external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive-css-cheat-sheet.css">
 </head>
 <body>
 
     <!-- Semantic Header element -->
-    <header>
-        <h1>CSS Animation Demonstration</h1>
-        <p>Showcasing keyframe animations, delays, loops, and directions.</p>
+    <header class="site-header">
+        <h1>Responsive CSS Cheat Sheet</h1>
+        <p>A quick summary of key concepts in responsive web design.</p>
     </header>
 
-    <!-- Semantic Main content element -->
-    <main>
-        <!-- Centered animation container -->
-        <section class="animation-container">
+    <!-- Semantic Main content area -->
+    <main class="main-content">
+        <!-- Grid container displaying topic boxes -->
+        <section class="cheat-sheet-grid">
             
-            <!-- Animated Element 1: Moving Box -->
-            <div class="animated-box" title="Moving Box"></div>
+            <!-- Topic 1: Filters -->
+            <article class="cheat-box">
+                <h3>Filters</h3>
+                <p>Apply visual adjustments like blur, grayscale, and sepia using the <code>filter</code> property.</p>
+            </article>
 
-            <!-- Animated Element 2: Bouncing Ball -->
-            <div class="animated-ball" title="Bouncing Ball"></div>
+            <!-- Topic 2: Media Queries -->
+            <article class="cheat-box">
+                <h3>Media Queries</h3>
+                <p>Apply CSS rules conditionally based on screen characteristics using <code>@media</code> breakpoints.</p>
+            </article>
 
-            <!-- Animated Element 3: Color-Changing Text -->
-            <div class="animated-text">Pulsing & Color-Changing Text</div>
+            <!-- Topic 3: Responsive Design -->
+            <article class="cheat-box">
+                <h3>Responsive Design</h3>
+                <p>Build fluid layouts that adapt seamlessly to all devices using CSS Grid and Flexbox structures.</p>
+            </article>
+
+            <!-- Topic 4: Typography -->
+            <article class="cheat-box">
+                <h3>Typography</h3>
+                <p>Scale font sizes smoothly across varying screen dimensions using relative units and <code>clamp()</code>.</p>
+            </article>
 
         </section>
     </main>
 
     <!-- Semantic Footer element -->
-    <footer>
-        <p>&copy; 2026 Web Design Assignment - Question 6</p>
+    <footer class="site-footer">
+        <p>&copy; 2026 Responsive Web Design Assignment - Question 6</p>
     </footer>
 
 </body>

@@ -3,41 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 5 - Styled Button Collection</title>
+    <title>Filter Cards with Animation</title>
     <!-- Link to the separate external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="filter-cards-animation.css">
 </head>
 <body>
 
     <!-- Semantic Header element -->
-    <header>
-        <h1>Styled Button Collection</h1>
-        <p>Demonstrating various button styles, states, and pseudo-classes.</p>
+    <header class="site-header">
+        <h1>Profile Cards Showcase</h1>
+        <p>Combining CSS filters, hover lifts, and page load keyframe animations.</p>
     </header>
 
-    <!-- Semantic Main content element -->
-    <main>
-        <!-- Container aligning buttons neatly using Flexbox -->
-        <section class="button-container">
+    <!-- Semantic Main content area -->
+    <main class="main-content">
+        <!-- Flexbox container holding three profile cards -->
+        <section class="cards-container">
             
-            <!-- Primary Button Style -->
-            <button class="btn primary-btn">Primary Button</button>
+            <!-- Profile Card 1 -->
+            <article class="profile-card">
+                <div class="image-wrapper">
+                    <img src="https://picsum.photos/id/1011/400/300" alt="Profile portrait of Alex" class="filter-grayscale">
+                </div>
+                <div class="card-content">
+                    <h3>Alex Morgan</h3>
+                    <p class="role">Frontend Developer</p>
+                    <p class="bio">Specializing in responsive design layouts, clean CSS architectures, and interactive components.</p>
+                </div>
+            </article>
 
-            <!-- Secondary Button Style -->
-            <button class="btn secondary-btn">Secondary Button</button>
+            <!-- Profile Card 2 -->
+            <article class="profile-card">
+                <div class="image-wrapper">
+                    <img src="https://picsum.photos/id/1012/400/300" alt="Profile portrait of Sarah" class="filter-sepia">
+                </div>
+                <div class="card-content">
+                    <h3>Sarah Jenkins</h3>
+                    <p class="role">UI/UX Designer</p>
+                    <p class="bio">Passionate about intuitive user experiences, accessibility, and modern visual aesthetics.</p>
+                </div>
+            </article>
 
-            <!-- Outline Button Style -->
-            <button class="btn outline-btn">Outline Button</button>
-
-            <!-- Disabled Button Style (:disabled state) -->
-            <button class="btn disabled-btn" disabled>Disabled Button</button>
+            <!-- Profile Card 3 -->
+            <article class="profile-card">
+                <div class="image-wrapper">
+                    <img src="https://picsum.photos/id/1027/400/300" alt="Profile portrait of David" class="filter-contrast">
+                </div>
+                <div class="card-content">
+                    <h3>David Chen</h3>
+                    <p class="role">Full Stack Engineer</p>
+                    <p class="bio">Focused on robust system architecture, performance optimization, and scalable web solutions.</p>
+                </div>
+            </article>
 
         </section>
     </main>
 
     <!-- Semantic Footer element -->
-    <footer>
-        <p>&copy; 2026 Web Design Assignment - Question 5</p>
+    <footer class="site-footer">
+        <p>&copy; 2026 Responsive Web Design Assignment - Question 5</p>
     </footer>
 
 </body>
